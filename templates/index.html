@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digit Recognition</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔢 AI Digit Recognition</h1>
+
+    <p>Enter 64 pixel values separated by commas.</p>
+
+    <form method="POST">
+        <textarea name="pixels"
+        placeholder="0,0,0,1,..."
+        required></textarea>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h2>Predicted Digit: {{ prediction }}</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
